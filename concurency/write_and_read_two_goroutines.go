@@ -23,7 +23,7 @@ func main() {
 
 	go func() {
 		defer wg.Done()
-		for i := range ch {
+		for i := range ch { // проходим
 			fmt.Println(i)
 		}
 	}()
