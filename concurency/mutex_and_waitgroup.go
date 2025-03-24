@@ -5,6 +5,8 @@ import (
 	"sync"
 )
 
+// 5 горутин увеличивают общий счётчик. Нужно защитить его от гонки.
+
 func main() {
 	var mu sync.Mutex
 	counter := 0

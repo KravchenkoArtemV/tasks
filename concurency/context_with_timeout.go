@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+// Нужно сделать операцию, которая выполняется 3 сек. и отменить её через 1 секунду с помощью context.WithTimeout.
+
 func main() {
 	// создаём контекст с таймаутом 1 секунда
 	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
