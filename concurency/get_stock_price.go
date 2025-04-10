@@ -29,9 +29,9 @@ func main() {
 	// запускаем фоновую горутину, которая постоянно обновляет цену
 	go func() {
 		for {
-			tempResult := getStockPrice() // получаем новую цену (медленно)
-			mu.Lock()                     // защищаем запись
-			result = tempResult
+			temp := getStockPrice() // получаем новую цену (медленно)
+			mu.Lock()               // защищаем запись
+			result = temp
 			mu.Unlock()
 		}
 	}()
